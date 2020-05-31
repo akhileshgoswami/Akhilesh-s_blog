@@ -1,0 +1,243 @@
+  {% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>WELCOME TO MY WEBSITE</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <div class="collapse " id="navbarHeader" style="background-color:#1c2a48">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About Me</h4>
+          <p class="text-muted">In This Blog We provide new Technologies and it's Name There bellow Thanks For Visting Our Website !!! A Lot Of Thanks <br> <h2 style='font-family:Comic Sans MS;color:teal'>WELCOME DEAR.!!</h2></p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled"><br>
+            <a href="https://twitter.com/Akhiles32182856" class="text-white"><img src="{% static 'twitter.png' %} " style="width:30px;height:30px" /></a>
+            &nbsp;
+           <a href="mailto:akgileshgoswami@gmail.com" class="text-white"><img src="{% static 'email.png' %} " style="width:30px;height:30px" /></a>
+            &nbsp;
+           <a href="{% static 'Akhilesh.pdf' %}" class="text-white "><img src="{% static 'resume.png' %} " style="width:40px;height:40px" /></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark  shadow-sm" style="background-color:#1c2a48">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+       
+        
+      <a href="{%url 'home'%}" class="nav-item nav-link active " style='font-family:Comic Sans MS;font-size:25px;color:white'>HOME</a> 
+   
+    </a> 
+        <a href="{%url 'allblogs'%}" class="nav-item nav-link active ml-auto" style='font-family:Comic Sans MS;font-size:25px;color:white'>Blog</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    </div>
+  </div>
+</header>
+<main role="main">
+<div class=" container">
+   <div class="row">
+   <div class="col-sm-1"></div>
+   <div class="col-sm-10 text-center pt-3">
+       <h1 style="font-family:Comic Sans MS"> {{ blog.title }}</h1>
+    </div>
+    <div class="col-sm-1"></div>
+   </div>
+
+    <div class="row">
+   <div class="col-sm-1"></div>
+   <div class="col-sm-10 text-center">
+      <p style="font-family:Comic Sans MS">{{blog.pub_date}}</p>
+    </div>
+    <div class="col-sm-1"></div>
+   </div>
+  <hr>
+
+<div class="row">
+   <div class="col-sm-1"></div>
+   <div class="col-sm-10 text-center">
+     <img class="bd-placeholder-img card-img-top T img-fluid" style="width:auto;height:auto" src="{{blog.image.url}}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
+   
+    </div>
+    <div class="col-sm-1"></div>
+   </div>
+     
+
+     <div class="row">
+   <div class="col-sm-1"></div>
+   <div class="col-sm-10 text-center">
+      <p style="font-size:20px"> {{blog.body}}</p>
+    </div>
+    <div class="col-sm-1"></div>
+   </div>
+     
+    
+</div>
+ 
+
+ 
+     
+    
+
+</main>
+
+<footer class="text-muted"   style="background-color:#1c2a48">
+
+      
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Footer links -->
+    <div class="row text-center text-md-left mt-3 pb-3">
+
+       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Royalbrand programming Pvt.LTD </h6>
+        <p>Welcome To My Comany Please Visit My Official Website </p>
+        <p class="text-uppercase mb-4 font-weight-bold">DEVLOPED AND DESIGENED BY <br>Akhilesh Goswami</p>
+        <img src="{% static 'akhilesh.jpg' %}" class="img img-Thumbnail" style="border-radius:50%;min-height:100px;max-height:200px"/>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+        <p>
+          <a href="#!">Learning Bootstrap</a>
+        </p>
+        <p>
+          <a href="#!">Learning CSS</a>
+        </p>
+        <p>
+          <a href="#!">Learning Python</a>
+        </p>
+        <p>
+          <a href="#!">Learning AI</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+        <p>
+          <a href="https://www.facebook.com/akhilesh.goswami.944">MY ACCOUNT</a>
+        </p>
+        <p>
+          <a href="#!">Become an Affiliate</a>
+        </p>
+        <p>
+          <a href="#!">Shipping Rates</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+      </div>
+
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none">
+      
+  
+    </div>
+    <!-- Footer links -->
+
+    <hr>
+   <div class="row container-fluid" style="background-color:#1c2a48">
+      <div class="col-md-12 col-lg-12" >
+
+        <!--Copyright-->
+        <p class="text-center">&copy; Akhilesh Goswami {% now 'Y' %}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="https://twitter.com/Akhiles32182856" class="text-white"><img src="{% static 'twitter.png' %} " style="width:30px;height:30px" /></a>
+            &nbsp;
+            <a href="mailto:akgileshgoswami@gmail.com" class="text-white"><img src="{% static 'email.png' %} " style="width:30px;height:30px" /></a>&nbsp;
+           <a href="https://instagram.com/royal_shiv_vanshi?igshid=aor914zl3iak" class="text-white"><img src="{% static 'instagram.png' %} " style="width:30px;height:30px" /></a>&nbsp;
+           <a href="https://www.facebook.com/akhilesh.goswami.944" class="text-white"><img src="{% static 'facebook.png' %} " style="width:30px;height:30px" /></a>&nbsp;
+          <a href="#" class="text-white"><img src="{% static 'linkedin.png' %} " style="width:30px;height:30px" /></a>&nbsp;
+
+        </p>
+
+      </div>
+      
+      </div>
+    <div class="row d-flex align-items-center" >
+
+      <!-- Grid column -->
+
+
+      <!-- Grid column -->
+
+  </div>
+    </div>
+    <!-- Grid row -->
+
+  <!-- Footer Links -->
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
